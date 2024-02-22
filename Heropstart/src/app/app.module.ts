@@ -7,6 +7,7 @@ import { DetailsComponent } from './component/details/details.component';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { Router } from 'express';
+import routeConfig from './routes';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,9 @@ import { Router } from 'express';
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    RouterLink,
-    NgModule,
+    RouterModule.forRoot(routeConfig),
     FormsModule,
     RouterOutlet,
-    RouterModule.forRoot([]),
 
   ]
 })
