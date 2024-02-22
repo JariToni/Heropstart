@@ -1,0 +1,26 @@
+<article>
+    <img class="listing-photo" [src]="housingLocation?.photo" alt="">
+    <section class="listing-description">
+        <h2 class="listing-heading"> {{housingLocation?.name}}</h2>
+        <p class="listing-location"> {{housingLocation?.city}}, {{housingLocation?.state}} </p>
+
+    </section>
+    <section class="listing-features">
+        <h2 class="section-heading">About:</h2>
+        <ul>
+            <li>Unit available: {{housingLocation?.availableUnits}}</li>
+            <li>Wifi: {{housingLocation?.wifi? "Present" : "Abscent"}}</li>
+            <li>Laundry: {{housingLocation?.laundry? "Present" : "Abscent"}}</li>
+        </ul>
+    </section>
+    <section class="listing-apply">
+        <h2 class="section-heading"> Apply to live here now!!</h2>
+        <button class="primary">Apply now</button>
+    </section>
+</article>
+<section class="listing-related">
+    <h2>Related Listings</h2>
+    <!-- <app-related *ngFor="let randomHouse of randomHouseSelectionList"[housingLocation]="randomHouse">
+    </app-related> -->
+  </section>
+
